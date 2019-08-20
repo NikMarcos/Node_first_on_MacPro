@@ -1,0 +1,10 @@
+div.navbar
+  div.search
+    label(for='src_field') Search:
+    input(type='text', placeholder='search', name='src_field')
+  div.links
+    if regstatus == 'true'
+      a(href="/sign_in/out") Выход
+    else
+      a(href="/sign_in") Вход
+      a(href="sign_up") Регистрация

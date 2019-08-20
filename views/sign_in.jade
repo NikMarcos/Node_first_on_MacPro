@@ -1,0 +1,9 @@
+extends layouts/layout
+block content
+  form(action="/sign_in", method="POST")
+    div
+      input(type='email', placeholder='email', name='email')
+    div
+      input(type='password', placeholder='password', name='pass')
+    div
+      input(type='submit', value='Sign in')

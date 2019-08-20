@@ -1,0 +1,17 @@
+extends layouts/layout
+
+block content
+  for one in user
+    div.user-class
+      strong= one.name
+      br
+      = one.email
+    br
+  h4 Данные аккаунта #{user[0].name}
+  for img in images
+    img(src="/images/#{img['image']}")
+
+  form(action="/images" method="post" enctype="multipart/form-data")
+    input(type='hidden' name='id' value=`${user[0].id}`)
+    input(type="file" name="avatar")
+    input(type='submit' value='Save')

@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/navbar.css')
+    if path === "/"
+      link(rel='stylesheet', href='/stylesheets/index.css')
+    else
+      link(rel="stylesheet", href='/stylesheets' + path + '.css', type="text/css")
+  body
+    include navbar.jade
+    div.content
+      block content

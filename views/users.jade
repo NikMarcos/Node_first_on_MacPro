@@ -1,0 +1,10 @@
+extends layouts/layout
+
+block content
+  h1 This page belongs to #{owner}
+  for user in users
+    div.user-class
+      strong= user.name
+      br
+      = user.email
+    br
